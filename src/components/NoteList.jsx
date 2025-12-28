@@ -16,7 +16,7 @@ function NoteList({ notes, onEdit, onDelete }) {
        //components
        <NoteCard
        //props pass gaareko, key unique vayeko vayera id pathakoa key ma natra mathia index pathayeni hunxa , key helps to find where we click 
-          key={note.id}
+          key={note._id}
           note={note}
           onEdit={onEdit}
           onDelete={onDelete}
