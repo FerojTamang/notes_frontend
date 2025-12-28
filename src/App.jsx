@@ -39,6 +39,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(note),
       })
+      window.location.reload()
       const newNote = await response.json()
       setNotes([newNote, ...notes])
     } catch (error) {
