@@ -13,10 +13,10 @@ function App() {
       ...note,
       createdAt: new Date().toISOString()
     }
-    setNotes([newNote, ...notes]) //... le cahai paialakao vaalue pania store garirakh paialoa jsato format ma testai vaneko, if new note chai apaaaxadi chaahinxa vaaney surue ma a.a..notes ani newnote
+    setNotes([newNote, ...notes]) //... le chai pahila ko vaalue store gariraaakxa paahilakoi formatama , if new note chai paxadi aauna chaahinxa vaaney surue ma ...notes ani newnote
   }
 
-  //map le read garxa, object ma fix data hunai vayera amap grn mildaina aonly araray mamilxa
+  //map le read garxa, object ma fix data huni vayera map grn mildaina only araray ma milxa
   const updateNote = (id, updatedNote) => {
     setNotes(notes.map(note =>  
       note.id === id ? { ...note, ...updatedNote } : note
@@ -42,7 +42,7 @@ function App() {
           editingNote={editingNote}
           onCancel={() => setEditingNote(null)}
         />
-        
+
         <NoteList
           notes={notes}
           onEdit={setEditingNote}
